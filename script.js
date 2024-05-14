@@ -30,9 +30,9 @@ function displayCurrentlyPlaying(data) {
 function redirectToSpotify() {
     
     var clientId = "9395ab50b42b4506aa39b1528d3fdc86";
-    var redirectUri = "https://localhost:8000/callback"; // Uygulamanızın geri yönlendirme URI'si
+    var redirectUri = "http://localhost:8000/callback"; // Uygulamanızın geri yönlendirme URI'si
     var scope = "user-read-private user-read-email"; // Kullanılacak kapsam (scope)
-    var spotifyAuthorizeUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scope)}`;
+    var spotifyAuthorizeUrl = `https://accounts.spotify.com/authorize?client_id=${"9395ab50b42b4506aa39b1528d3fdc86"}&response_type=code&redirect_uri=${encodeURIComponent("http://localhost:8000/callback")}&scope=${encodeURIComponent(scope)}`;
 
     // Kullanıcıyı Spotify yetkilendirme sayfasına yönlendirin
     window.location.href = spotifyAuthorizeUrl;

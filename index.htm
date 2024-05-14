@@ -6,31 +6,59 @@
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="stiller.css">
+    <style>
+      body {
+        background-color: black;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    
 
-    <!--Navbar Kodu-->
-    <nav class="navbar navbar-expand-lg" style="background-color: #E39DFA;">
-      <div class="container-fluid" >
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" >Hakkında</a>
-            <a class="nav-link" href="cv.htm">CV</a>
-            <a class="nav-link" href="sehrim.htm">Şehrim</a> 
-            <a class="nav-link " href="mirasimiz.htm" >Mirasımız</a>
-            <a class="nav-link" href="ilgialanlari.htm">İlgi Alanları</a>  
-            <a class="nav-link" href="login.php">Log in</a>
-            <a class="nav-link" href="iletisimform">İletişim Formu</a>
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(66 66 69 / 70%);">
+      <div class="container-fluid">
+        <div class="navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" >Hakkımda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cv.htm" >CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sehrim.htm">Şehrim</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mirasimiz.htm">Takımımız</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ilgialanlari.htm">İlgi Alanlarım</a> 
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Log in</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav> 
-    <p class="hakkimda"> <b>Selva Artunç</b><br> Sakarya Üniversitesi Bilgisayar Mühendisliği 1.Sınıf öğrencisi.<time>04/03/2005</time> tarihinde dünyaya geldim.Manisa'nın Akhisar ilçesinde büyüdüm.</p>
-    <p class="hakkimda" ><b>Hobilerim</b><br>Müzik dinlemeyi,puzzle çözmeyi,gitar çalmak hobilerimdir.</p>
+    </nav>
     
-  <div class="hakkimda">
+    
+    
+    <h5 style="color: rgba(255, 255, 255, 0.56);" class="cv">Selva Artunç</h5>
+    <p class="cv"style="color: white;" > Sakarya Üniversitesi Bilgisayar Mühendisliği 1.Sınıf öğrencisi.<time>04/03/2005</time> tarihinde dünyaya geldim.Manisa'nın Akhisar ilçesinde büyüdüm.</p>
+    <h5 style="color: rgba(255, 255, 255, 0.56);" class="cv">Hobilerim</h5>
+    <p class="cv"style="color: white;">Müzik dinlemeyi,puzzle çözmeyi,gitar çalmak hobilerimdir.</p>
+    
+  <div class="cv">
     <div id="carouselExampleIndicators" class="carousel slide">
-      <p ><b>Sporlar</b><br>Okçuluk,futbol ve basketbol yaptığım sporlardır.</p>
+      <h5 style="color: rgba(255, 255, 255, 0.56);" class="cv">Sporlar</h5>
+       <p style="color: white;"> Okçuluk,futbol ve basketbol yaptığım sporlardır.</p>
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -56,13 +84,12 @@
     </div>
   </div>
   </div>
-    <div class="hakkimda"  >
-        <h5 class="card-title">İlgi Alanlarım</h5>
-        <p class="card-text">İlgi Alanlarım yönlendirir...</p>
-        <a href="ilgialanlari.htm" class="card-link">Tıklayınız</a>
+    <div class="cv" >
+        <h5 class="card-title" style="color: rgba(255, 255, 255, 0.56);" text-align="center">İlgi Alanlarım</h5>
+        <a href="ilgialanlari.htm" style="color: rgb(41, 151, 255);">İlgi Alanlarım yönlendirir...<br><br></a> 
     </div>
     
-    <footer class="footer"> 
+    <footer class="footer"style="background-color:  rgb(66 66 69 / 70%);"> 
       <p >Selva Artunç tarafından oluşturulmuş bir web sitesidir. All rights reserved,2024</p>
     </footer>
     
