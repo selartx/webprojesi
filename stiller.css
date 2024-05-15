@@ -171,3 +171,10 @@ body {
 .textright{
   text-align: right;
 }
+ .error {
+        color: red;
+    }
+.success {
+        color:rgb(41, 151, 255);;
+    }
+

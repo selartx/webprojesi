@@ -16,14 +16,14 @@
         ];
 
         if(empty($user) || empty($pass)){
-            echo "error: both fields are required.";
+            echo "<span class='error'>error: both fields are required.</span>";
         }
         elseif(array_key_exists($user, $users) && password_verify($pass, $users[$user])){
             // Her kullanıcı için '@' öncesindeki kısmı kullanarak hoş geldiniz mesajı gösterme
-            echo "$username_part hoş geldiniz";
+            echo "<span class='success'>$username_part hoş geldiniz</span>";
         } 
         else {
-            echo "error: please enter correct data";
+            echo "<span class='error'>error: please enter correct data</span>";
         }
     }
 ?>
@@ -45,19 +45,20 @@
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
- <nav class="navbar navbar-expand-lg" style="background-color: rgb(66 66 69 / 70%);">
-      <div class="container-fluid" >
-          <div class="navbar-nav">
-            <a class="nav-link " aria-current="page" style="color: white;">Hakkında</a>
-            <a class="nav-link" href="cv.htm" style="color: white;">CV</a>
-            <a class="nav-link" href="sehrim.htm" style="color: white;">Şehrim</a> 
-            <a class="nav-link " href="mirasimiz.htm" style="color: white;">Mirasımız</a>
-            <a class="nav-link" href="ilgialanlari.htm" style="color: white;">İlgi Alanları</a>  
-            <a class="nav-link active" href="login.php" style="color: white;">Log in</a>
-            <a class="nav-link" href="iletisimform.htm" style="color: white;">İletişim Formu</a>
-        </div>
+  
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(66 66 69 / 70%);">
+    <div class="container-fluid" >
+        <div class="navbar-nav">
+          <a class="nav-link " aria-current="page" href="index.htm" style="color: white;">Hakkında</a>
+          <a class="nav-link active" href="cv.htm" style="color: white;">CV</a>
+          <a class="nav-link" href="sehrim.htm" style="color: white;">Şehrim</a> 
+          <a class="nav-link " href="mirasimiz.htm" style="color: white;">Takımımız</a>
+          <a class="nav-link" href="ilgialanlari.htm"style="color: white;">İlgi Alanları</a>  
+          <a class="nav-link" href="login.php" style="color: white;">Log in</a>
+          <a class="nav-link" href="iletisimform.htm" style="color: white;">İletişim Formu</a>
       </div>
-    </nav> 
+    </div>
+  </nav>
     <form action="" method="post">
     <table >
         <tr>
