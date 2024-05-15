@@ -138,3 +138,36 @@
     text-decoration: none;
     cursor: pointer;
 }
+body {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.text-overlay {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.text-overlay h5 {
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+.textright{
+  text-align: right;
+}

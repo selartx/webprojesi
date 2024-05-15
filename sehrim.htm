@@ -21,30 +21,16 @@
 <nav class="navbar navbar-expand-lg" style="background-color: rgb(66 66 69 / 70%);">
     <div class="container-fluid" >
         <div class="navbar-nav">
-          <a class="nav-link " aria-current="page" href="index.htm">Hakkında</a>
-          <a class="nav-link" href="cv.htm">CV</a>
-          <a class="nav-link active" href="sehrim.htm">Şehrim</a> 
-          <a class="nav-link " href="mirasimiz.htm" >Takımımız</a>
-          <a class="nav-link" href="ilgialanlari.htm">İlgi Alanları</a>  
-          <a class="nav-link" href="login.php">Log in</a>
-          <a class="nav-link" href="iletisimform">İletişim Formu</a>
+          <a class="nav-link " aria-current="page" href="index.htm" style="color: white;">Hakkında</a>
+          <a class="nav-link" href="cv.htm" style="color: white;">CV</a>
+          <a class="nav-link active" href="sehrim.htm" style="color: white;">Şehrim</a> 
+          <a class="nav-link " href="mirasimiz.htm" style="color: white;" >Takımımız</a>
+          <a class="nav-link" href="ilgialanlari.htm" style="color: white;">İlgi Alanları</a>  
+          <a class="nav-link" href="login.php" style="color: white;">Log in</a>
+          <a class="nav-link" href="iletisimform.htm" style="color: white;">İletişim Formu</a>
       </div>
     </div>
   </nav> 
-  
-<!-- Modal -->
-<div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="popupModalLabel"></h5>
-        <button type="button" class="btn-close" aria-label="Close" onclick="document.getElementById('popupModal').classList.remove('show'); document.body.classList.remove('modal-open');"></button>
-      </div>
-      <div class="modal-body" id="popupModalBody">
-      </div>
-    </div>
-  </div>
-</div>
 
   <h1 class="headeralign" style="color: rgba(255, 255, 255, 0.56);">Akhisar</h1>
   <p class="textresponsive" style="color: white;">Akhisar, Manisa'nın bir ilçesidir. Şehir merkezinde on dört mahallesi, kırsalda doksan altı köyü bulunan Akhisar, 177.419 kişilik nüfusu ile Manisa'nın il merkezi dışında nüfusu en yüksek, Türkiye'nin ise yüz otuz sekizinci nüfusu en yüksek ilçesidir. Orta Gediz Havzası'nda bulunan Akhisar Ovası üzerinde kurulu olan şehir, güneyde Gölmarmara, güneybatıda Saruhanlı, batıda İzmir'in Aliağa ilçesi, kuzeyde Balıkesir'in Sındırgı ilçesi, kuzeybatıda Kırkağaç ve Soma, doğusunda ise Gördes ile komşudur. Akhisar, 1645 km²'lik yüzölçümü ile Manisa genelinde en fazla yüzölçümüne sahip ilçe konumundadır. İlçenin en önemli geçim kaynağı tarımdır. Tarım dışında hammaddeye dayalı sanayi ve ticaret ilçenin diğer ekonomik faaliyetlerindendir. İlçenin topraklarının %47'si tarım arazisi olarak kullanılırken bu arazilerde daha çok zeytin ve üzüm üretimi gerçekleştirilmektedir.</p>
@@ -60,22 +46,23 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
+  <div class="cv">
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#popupModal">
+    <div class="carousel-item active" onclick="showText('Akhisar')">
       <div class="carousel-caption"><h5>Akhisar</h5></div>
       <img src="fotoğraflar/akhisar.jpg" class="d-block w-100">
     </div>
-    <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#popupModal1">
+    <div class="carousel-item" onclick="showText('Tepe Mezarı')">
       <div class="carousel-caption"><h5>Tepe Mezarı</h5></div>
-    <img src="fotoğraflar/tepemezarı.jpg" class="d-block " >
+      <img src="fotoğraflar/tepemezarı.jpg" class="d-block">
     </div>
-    <div class="carousel-item"data-bs-toggle="modal" data-bs-target="#popupModal0">
+    <div class="carousel-item" onclick="showText('Akhisar Müzesi')">
       <div class="carousel-caption"><h5>Akhisar Müzesi</h5></div>
-     <img src="fotoğraflar/müze.jpg" class="d-block " >
+      <img src="fotoğraflar/müze.jpg" class="d-block">
     </div>
-    <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#popupModal">
+    <div class="carousel-item" onclick="showText('Gölet')">
       <div class="carousel-caption"><h5>Gölet</h5></div>
-    <img src="fotoğraflar/gölet.jpeg" class="d-block " >
+      <img src="fotoğraflar/gölet.jpeg" class="d-block">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -87,9 +74,31 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
+</div>
+<div id="textOverlay" class="text-overlay">
+  <span class="close-btn" onclick="hideText()">×</span>
+  <h5 id="overlayTitle"></h5>
+  <p id="overlayText"></p>
+</div>
 
   <footer class="footer" style="background-color: rgb(66 66 69 / 70%);"> <p >Selva Artunç tarafından oluşturulmuş bir web sitesidir. All rights reserved,2024</p></footer>
-</body>
+  <script>
+    const texts = {
+      'Akhisar':  "Akhisar, Manisa'nın bir ilçesidir. Şehir merkezinde on dört mahallesi, kırsalda doksan altı köyü bulunan Akhisar, 177.419 kişilik nüfusu ile Manisa'nın il merkezi dışında nüfusu en yüksek, Türkiye'nin ise yüz otuz sekizinci nüfusu en yüksek ilçesidir",
+      'Tepe Mezarı': "Halk arasında “Tepe Mezarlığı” adıyla anılan semtte yapılan kazılarda, Roma dönemine ait sütunlu bir cadde ile çeşitli mimari parçalar ve sikkeler bulunmuştur. Mevcut kalıntıların yanı sıra, Hıristiyanlığın ilk çağlarına ait Ege Bölgesi’nde bulunan yedi kiliseden, Thyateira Kilisesi’nin bulunduğu yer olarak da inanç turizmi kapsamında ziyaret edilen önemli yerlerden biridir.",
+      'Akhisar Müzesi': "1933 yılında Ali Şefik Hastanesi olarak yapılan bina, aynı yıl Milli Eğitim Bakanlığı'na devredilerek 1992 yılına kadar Ali Şefik Ortaokulu olarak hizmet vermiştir. 1994-2007 yılları arasında Öğretmen Evi olarak kullanılmıştır. 4 Eylül 2006 tarihinde Akhisar Müzesi yeri olarak karar verilen, 2007 yılında onarımına başlanan müze, 2011 yılında bitirilmiş, 2012 yılının Ağustos ayında açılmıştır. Akhisar Müzesi 11 bölümde 1451 eserin sergilendiği arkeoloji ve etnografik eserlerden oluşmaktadır. Arkeolojik seksiyonda, 18-11 milyon yaşlarında fosiller, idoller, el aletleri, MÖ 6000-3000 yıllarına tarihlenen Yortan seramikleri, MÖ 700-500 yıllarına ait seramik, gümüş kap ve altın buzağı, Hellenistik Dönem seramikleri, MÖ 500 - MS 200 tarihleri arasına ait figürinler, yağ kandilleri, mezar stelleri ve cam eserler sergilenmektedir. MÖ 500'lere tarihlenen lir çalan Eros, aslan başlı küpe, Herakles mührü, altın yüzük, kolye, iğne, Hıristiyanlık Dönemi'ne ait günlük alet ve eşyalar da bu bölümde yerini almıştır.",
+      'Gölet': "Uzun yıllar boyunca atıl durumda kalan 50 bin metrekare alana sahip Hüsnü Kahraman Parkında, toplam 50 bin metrekare alan içerisinde 10 bin metrekare gölet bulunurken, geri kalan 40 bin metrekare ise vatandaşlarımızın boş zamanlarında spor ve dinlenme gibi sosyal aktivitelerini gerçekleştirebileceği yeşil alan olarak hizmet vermektedir. Toplam 50 bin metrekare alan Gölet içerisinde Restaurant, Yürüyüş pistleri, 2 Adet otopark, 1 fuar alanı, seyir tepeleri, mescid, yel değirmeni, fitness alanları, çocuk oyun alanları ile vatandaşlarımızın sosyal aktivitelerini gerçekleştirebileceği alanlar mevcuttur."
+    };
 
+    function showText(title) {
+      document.getElementById('overlayTitle').textContent = title;
+      document.getElementById('overlayText').textContent = texts[title];
+      document.getElementById('textOverlay').style.display = 'block';
+    }
+
+    function hideText() {
+      document.getElementById('textOverlay').style.display = 'none';
+    }
+  </script>
+</body>
 </html>
