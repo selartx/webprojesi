@@ -1,3 +1,4 @@
+
 <template>
   <singupform/>
 </template>
