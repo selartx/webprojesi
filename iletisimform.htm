@@ -5,45 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="stiller.css">
-    <script src="form.js"></script>
-    <script src="app.components.ts"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-</head>
+    <style>
+      body {
+        background-color: #333;
+        color: white;
+      }
+      .footer {
+        background-color: rgb(66 66 69 / 70%);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+      }
+      .reset {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
   <body>
     
     <nav class="navbar navbar-expand-lg" style="background-color: rgb(66 66 69 / 70%);">
-      <div class="container-fluid" >
-          <div class="navbar-nav">
-            <a class="nav-link " aria-current="page" href="index.htm" style="color: white;">Hakkında</a>
-            <a class="nav-link a" href="cv.htm" style="color: white;">CV</a>
-            <a class="nav-link" href="sehrim.htm" style="color: white;">Şehrim</a> 
-            <a class="nav-link " href="mirasimiz.htm" style="color: white;">Takımımız</a>
-            <a class="nav-link" href="ilgialanlari.htm"style="color: white;">İlgi Alanları</a>  
-            <a class="nav-link" href="login.php" style="color: white;">Log in</a>
-            <a class="nav-link active" href="iletisimform.htm" style="color: white;">İletişim Formu</a>
+      <div class="container-fluid">
+        <div class="navbar-nav">
+          <a class="nav-link" aria-current="page" href="index.htm" style="color: white;">Hakkında</a>
+          <a class="nav-link" href="cv.htm" style="color: white;">CV</a>
+          <a class="nav-link" href="sehrim.htm" style="color: white;">Şehrim</a>
+          <a class="nav-link" href="mirasimiz.htm" style="color: white;">Takımımız</a>
+          <a class="nav-link" href="ilgialanlari.htm" style="color: white;">İlgi Alanları</a>
+          <a class="nav-link" href="login.php" style="color: white;">Log in</a>
+          <a class="nav-link active" href="iletisimform.htm" style="color: white;">İletişim Formu</a>
         </div>
       </div>
     </nav>
-   
-
-    <!-- Tek form -->
+    
     <form id="mainForm">
-      <label style="color: white;">Email:</label>
+      <label for="mainEmail" style="color: white;">Email:</label>
       <input type="email" id="mainEmail" required>
-      <label style="color: white;">Password:</label>
+      <label for="mainPassword" style="color: white;">Password:</label>
       <input type="password" id="mainPassword" required>
-      <label style="color: white;">Role:</label>
+      <label for="mainRole" style="color: white;">Role:</label>
       <select id="mainRole">
           <option value="developer">Web Developer</option>
           <option value="designer">Web Designer</option>
       </select>
-      <label style="color: white;">Text Box:</label>
+      <label for="mainTextbox" style="color: white;">Text Box:</label>
       <input type="text" id="mainTextbox">
       <div class="terms">
           <input type="checkbox" id="mainTerms" required>
-          <label style="color: rgb(41, 151, 255);">Accept terms and conditions</label>
+          <label for="mainTerms" style="color: rgb(41, 151, 255);">Accept terms and conditions</label>
       </div>
       <div class="submit">
           <button type="submit" onclick="javascriptFormSubmit()">JavaScript Gönder</button>
@@ -52,15 +62,83 @@
           <button type="button" onclick="angularFormReset()" class="reset">Angular Temizle</button>
       </div>
     </form>
-  
-  
- 
-  <footer class="footer" style="background-color:  rgb(66 66 69 / 70%); position: fixed; bottom: 0; width: 100%;"> 
-    <p >Selva Artunç tarafından oluşturulmuş bir web sitesidir. All rights reserved,2024</p>
-  </footer>
-  
-  
-  
-</body>
 
+    <footer class="footer">
+      <p>Selva Artunç tarafından oluşturulmuş bir web sitesidir. All rights reserved, 2024</p>
+    </footer>
+
+    <script>
+      function javascriptFormSubmit() {
+        const form = document.getElementById('mainForm');
+        const emailInput = document.getElementById('mainEmail');
+        const passwordInput = document.getElementById('mainPassword');
+        const roleSelect = document.getElementById('mainRole');
+        const termsCheckbox = document.getElementById('mainTerms');
+        const textboxInput = document.getElementById('mainTextbox');
+
+        if (form.checkValidity()) {
+          console.log('JavaScript form gönderildi');
+          console.log('Email:', emailInput.value);
+          console.log('Password:', passwordInput.value);
+          console.log('Role:', roleSelect.value);
+          console.log('TextBox:', textboxInput.value);
+          console.log('Terms Accepted:', termsCheckbox.checked);
+        } else {
+          console.log('Lütfen formu doğru şekilde doldurun.');
+        }
+      }
+
+      function javascriptFormReset() {
+        const form = document.getElementById('mainForm');
+        form.reset();
+        console.log('JavaScript form temizlendi');
+      }
+
+      class FormComponent {
+        constructor() {
+          this.emailInput = document.getElementById('mainEmail');
+          this.passwordInput = document.getElementById('mainPassword');
+          this.roleSelect = document.getElementById('mainRole');
+          this.termsCheckbox = document.getElementById('mainTerms');
+          this.textboxInput = document.getElementById('mainTextbox');
+        }
+
+        handleTextboxInput(event) {
+          if (event.key === 'Enter') {
+            console.log(this.textboxInput.value);
+          }
+        }
+
+        handleSubmit() {
+          const form = document.getElementById('mainForm');
+          if (form.checkValidity()) {
+            console.log('Angular form gönderildi');
+            console.log('Email:', this.emailInput.value);
+            console.log('Password:', this.passwordInput.value);
+            console.log('Role:', this.roleSelect.value);
+            console.log('TextBox:', this.textboxInput.value);
+            console.log('Terms Accepted:', this.termsCheckbox.checked);
+          } else {
+            console.log('Lütfen formu doğru şekilde doldurun.');
+          }
+        }
+
+        handleReset() {
+          const form = document.getElementById('mainForm');
+          form.reset();
+          console.log('Angular form temizlendi');
+        }
+      }
+
+      const formComponent = new FormComponent();
+
+      function angularFormSubmit() {
+        formComponent.handleSubmit();
+      }
+
+      function angularFormReset() {
+        formComponent.handleReset();
+      }
+    </script>
+  </body>
 </html>
