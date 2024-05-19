@@ -59,6 +59,7 @@
       </div>
     </div>
   </nav>
+  <div class="cv">
     <form action="" method="post">
     <table >
         <tr>
@@ -75,8 +76,9 @@
         </tr>
     </table>
 </form>
-<footer class="footer" style="background-color:  rgb(66 66 69 / 70%); position: fixed; bottom: 0; width: 100%;"> 
-      <p >Selva Artunç tarafından oluşturulmuş bir web sitesidir. All rights reserved,2024</p>
-    </footer>
+    </div>
+    <footer class="footer" style="background-color:  rgb(66 66 69 / 70%); position: fixed; bottom: 0; width: 100%;"> 
+    <p >Selva Artunç tarafından oluşturulmuş bir web sitesidir. All rights reserved,2024</p>
+  </footer>
 </body>
 </html>
